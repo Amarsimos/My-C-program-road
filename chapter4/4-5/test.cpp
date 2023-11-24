@@ -8,8 +8,9 @@ void swap(int *px, int *py)  /* WRONG */
 }
 main()
 {
-        int a = 10;
-        int b = 20;
+        int a = 1;
+        int b = 2;
+        int *pa = &a;
         swap(&a, &b);
         printf("a = %d\nb = %d", a, b);
 }
