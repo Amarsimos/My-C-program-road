@@ -1,7 +1,9 @@
 #include <ctype.h>
 #include <stdio.h>
-int getch(void);
-void ungetch(int);
+#include <conio.h>
+// #include <string.h>
+// int getch(void);
+// void ungetch(int);
 
 /* getint：取得输入中整数并放到 *pn 中 */
 int getint(int *pn)
@@ -24,3 +26,9 @@ int getint(int *pn)
         ungetch(c);
     return c;
 }
+int main()
+{
+    int a = 10;
+    int b = 20;
+}
+
