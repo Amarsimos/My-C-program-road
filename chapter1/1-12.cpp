@@ -1,7 +1,7 @@
 #include <stdio.h>
 #define IN 1 /* inside a word */
 #define OUT 0 /* outside a word */
- /* ±àĞ´Ò»¸ö³ÌĞò£¬ÒÔÃ¿ĞĞÒ»¸öµ¥´ÊµÄĞÎÊ½´òÓ¡ÆäÊäÈë */
+ /* ç¼–å†™ä¸€ä¸ªç¨‹åºï¼Œä»¥æ¯è¡Œä¸€ä¸ªå•è¯çš„å½¢å¼æ‰“å°å…¶è¾“å…¥ */
 main()
 {
 int c, nl, nw, nc, state;
@@ -9,14 +9,14 @@ state = OUT;
 while ((c = getchar()) != EOF) {
 if (c == ' ' || c == '\n' || c == '\t'){
 	state = OUT;
-	printf("\n");//Ã¿µ±ÊäÈëÒ»¸ö¿Õ¸ñ´òÓ¡Ò»¸ö»»ĞĞ·û 
+	printf("\n");//æ¯å½“è¾“å…¥ä¸€ä¸ªç©ºæ ¼æ‰“å°ä¸€ä¸ªæ¢è¡Œç¬¦ 
 	//state = IN;
 }
  
 else if (state == OUT) {
 //state = IN;
 //printf("1");
-putchar(c);//²»ÊÇ¿Õ¸ñÔòÕı³£Êä³ö 
+putchar(c);//ä¸æ˜¯ç©ºæ ¼åˆ™æ­£å¸¸è¾“å‡º 
 }
 
 

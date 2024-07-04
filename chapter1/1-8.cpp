@@ -1,18 +1,19 @@
+// 练习 1-8. 写一个程序，统计输入中的空格、制表符和换行符的个数。
+
 #include <stdio.h>
- /* count lines in input */
- //��дһ��ͳ�ƿո��Ʊ����뻻�з������ĳ���
+
 main()
 {
-int c,nk,nt,nn;
-nk = 0;
-nt = 0;
-nn = 0;
-while ((c = getchar()) != EOF)
-if (c == '\n')
-++nn;
-	else if (c == ' ')
-	++nk;
- 	else if(c == '\t')
-	++nt;
-printf("k:%3d  t:%3d  n:%3d", nk,nt,nn);
+	int char_get, num_space, num_tab, num_next;
+	num_space = 0;
+	num_tab = 0;
+	num_next = 0;
+	while ((char_get = getchar()) != EOF)//检测到EOF时退出循环
+		if (char_get == '\n')
+			++num_next; 
+		else if (char_get == ' ')
+			++num_space;
+		else if (char_get == '\t')
+			++num_tab;
+	printf("number of spaces:%3d  tabs:%3d  next:%3d", num_space, num_tab, num_next);
 }
