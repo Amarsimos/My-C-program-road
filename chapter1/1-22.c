@@ -5,42 +5,86 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAXLINE 20
+// #define MAXLINE 20
+#define MAXCOL 10
 
-void cutline(char line) 
-int main() 
+void cutline(int input);
+int main()
 {
-    catline(line);
-    printf("The line is:\n");
-    printf("%s", line);
+    int input = 0;
+    int line = 0;
+
+    // printf("The line is:\n");
+    cutline(input);
+    // printf("%s", line);
     return 0;
-    
 }
 
-void cutline(char line) 
+void cutline(int input)
 {
-    int col_count = 1;
+    int col_count = 0;
     int word_count = 0;
-    while ((line = getchar()) != '\0' && line != 'EOF') 
+    int word[MAXCOL] = {0};
+    int c = 0;
+    while ((input = getchar()) != EOF)
     {
-        col_count++;
-        if (line == '\n')
+        if (input == ' ')
         {
-            putchar('\n');
+            c = (col_count % MAXCOL);
+            if (0 < c && c < MAXCOL)
+            {
+                putchar(input);
+                col_count++;
+            }
+            else if (0 == c && col_count != 0)
+            {
+                putchar('\n');
+                printf("%s", word);
+                col_count = 0;
+                word_count = 0;
+            }
+            else
+            {
+                putchar(input);
+                col_count++;
+            }
         }
-        else if (line == ' ')
+        else if (input == '\n')
         {
+            putchar(input);
+            col_count = 0;
+            word_count = 0;
+        }
+        else
+        {
+            c = (col_count % MAXCOL);
+            if (0 < c && c < MAXCOL)
+            {
+                putchar(input);
+                col_count++;
+            }
+            else if (0 == col_count % MAXCOL && col_count != 0)
+            {
+                putchar(input);
+                putchar('\n');
+            }
+            word[word_count] = input;
+            col_count++;
             word_count++;
-            if (MAXLINE - (word_count + col_count) < 0)
-            putchar('\n');
-            else if 
-                for (int i = 0; i < MAXLINE - (word_count + col_count); i++)
-                {
-                    putchar(' ');
-                }
-
         }
-        else if (line == )
     }
-    
+    // {
+    //     if (0 < col_count % MAXCOL < MAXCOL)
+    //     {
+    //         putchar(input);
+    //         col_count++;
+    //     }
+    //     else if (0 == col_count % MAXCOL && col_count != 0)
+    //     {
+    //         putchar('\n');
+    //     }
+    //     word[word_count] = input;
+    //     col_count++;
+    //     word_count++;
+    // }
 }
