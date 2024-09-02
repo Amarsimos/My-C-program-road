@@ -126,7 +126,7 @@
     "git.autofetch": true,
     /*debug*/
     "debug.toolBarLocation": "docked", //固定调试时工具条的位置，防止遮挡代码内容（个人喜好）
-    "debug.internalConsoleOptions": "openOnSessionStart", //每次调试都打开调试控制台，方便调试
+    // "debug.internalConsoleOptions": "openOnSessionStart", //每次调试都打开调试控制台，方便调试
     "debug.showBreakpointsInOverviewRuler": true, //在滚动条标尺上显示断点的位置，便于查找断点的位置
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup", //在启动调试会话前保存除了无标题文档以外的文档
     "debug.onTaskErrors": "debugAnyway",
