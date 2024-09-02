@@ -14,7 +14,7 @@
             "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
-            "console": "interalconsole",
+            "internalConsoleOptions": "openOnFirstSessionStart",
             "MIMode": "gdb",
             "miDebuggerPath": "D:\\mingw64\\bin",
             "setupCommands": [
