@@ -103,25 +103,25 @@
     "window.dialogStyle": "custom", //对话框样式
     "window.menuBarVisibility": "visible", //在全屏模式下仍然显示窗口顶部菜单（没有菜单很难受）
     /*CmakeConfig*/
-    "cmake.options.advanced": {
-        "build": {
-            "statusBarVisibility": "inherit",
-            "inheritDefault": "visible"
-        },
-        "launch": {
-            "statusBarVisibility": "inherit",
-            "inheritDefault": "visible"
-        },
-        "debug": {
-            "statusBarVisibility": "inherit",
-            "inheritDefault": "visible"
-        }
-    },
-    "C_Cpp.default.includePath": [
-        "D:\\mingw64\\include",
-        "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include"
-    ],
-    "C_Cpp.errorSquiggles": "disabled",
+    // "cmake.options.advanced": {
+    //     "build": {
+    //         "statusBarVisibility": "inherit",
+    //         "inheritDefault": "visible"
+    //     },
+    //     "launch": {
+    //         "statusBarVisibility": "inherit",
+    //         "inheritDefault": "visible"
+    //     },
+    //     "debug": {
+    //         "statusBarVisibility": "inherit",
+    //         "inheritDefault": "visible"
+    //     }
+    // },
+    // "C_Cpp.default.includePath": [
+    //     "D:\\mingw64\\include",
+    //     "D:\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\13.2.0\\include"
+    // ],
+    // "C_Cpp.errorSquiggles": "disabled",
     /* Git config */
     "git.autofetch": true,
     /*debug*/
