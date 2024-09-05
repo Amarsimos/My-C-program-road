@@ -2,9 +2,9 @@
 #include <stdio.h>
 int main(void)
 {
-    int ten = 2147483647;
-    unsigned int two = 4294967295;
-    printf("%d minus %d is %d\n", ten, ten + 1, ten + 2);
-    printf("%d minus %d is %d\n", two, two + 1, two + 2);
+    float a, b;
+    b = 2.0e4 + 1.0;
+    a = b - 2.0e4;
+    printf("%f \n", a);
     return 0;
 }
