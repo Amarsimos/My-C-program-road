@@ -1,19 +1,11 @@
 #include <stdio.h>
-void pound(int n); // ANSI 函数原型声明
+#define ADJUST 7.31
 int main(void)
 {
-    int times = 5;
-    char ch = '!';
-    float f = 6.0f;
+    int n = 0;
+    size_t intsize;
 
-    pound(times);
-    pound(ch);
-    pound(f);
+    intsize = sizeof(double);
+    printf("n = %d,n has %zd bytes;all ints have %zd bytes.\n", n, sizeof n, intsize);
     return 0;
-}
-void pound(int n)
-{
-    while (n-- > 0)
-        printf("#");
-    printf("\n");
 }
