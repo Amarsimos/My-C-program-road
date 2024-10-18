@@ -6,7 +6,7 @@ int main(void)
     char ch = 0;
     int i = 0;
     printf("Enter a string: \n");
-    ch = getchar(); // goto 进行流程控制有太多不确定性,还是使用while循环
+    ch = getchar(); // goto 进行流程控制有太多不确定性,使用goto无法控制条件,还是使用while循环
     while (ch != EOF)
     {
         Print_ASCII(ch);
