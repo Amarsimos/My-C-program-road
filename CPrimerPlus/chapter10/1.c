@@ -33,7 +33,7 @@ int main(void)
         for (year = 0, subtot = 0; year < YEARS; year++)
             // subtot += rain[year][month];
             subtot += *(*(rain + year) + month);
-        printf("%991.1f\t\t", subtot / YEARS);
+        printf("%1.1f\t", subtot / YEARS);
     }
     printf("\n");
     return 0;
