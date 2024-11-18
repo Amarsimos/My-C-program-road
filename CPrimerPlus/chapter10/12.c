@@ -1,8 +1,12 @@
 #include <stdio.h>
-#define MONTHS 12
 #define YEARS 5
+#define MONTHS 12
+#define ROWS 3
+#define COLS 5
+void arr_multiply(int rows, int cols, int arr1[ROWS][COLS]); // 函数参数为数组时注意,传递进来的是指针,指向数组的首地址,而不是数组本身,定义也应该是指针类型
+void arr_show(int rows, int cols, int arr[rows][cols]);
 
-int main(void)
+int main()
 {
     const float rain[YEARS][MONTHS] =
         {
@@ -13,8 +17,16 @@ int main(void)
             {3.7, 3.6, 3.4, 3.7, 4.2, 5.0, 5.3, 5.5, 5.0, 4.5, 4.0, 3.6}};
     int year, month;
     float total, subtot;
-
     printf(" YEAR   RAINFALL(inchs)\n");
+    tab_total(year, month, total, subtot);
+    printf("\nThe yearly average is %.1f inches.\n\n", total / YEARS);
+
+    printf("\nMONTHLY AVERAGES:\n");
+    tab_monthly(month, year, rain);
+    return 0;
+}
+void tab_total(float year, float month, float total, float subtot)
+{
     for (year = 0, total = 0; year < YEARS; year++)
     {
         for (month = 0, subtot = 0; month < MONTHS; month++)
@@ -25,16 +37,15 @@ int main(void)
         printf("%5d%10.1f\n", year + 2010, subtot);
         total += subtot;
     }
-    printf("\nThe yearly average is %.1f inches.\n\n", total / YEARS);
-    printf("MONTHLY AVERAGES:\n\n");
-    printf("Jan\t  Feb\t  Mar\t  Apr\t  May\t  Jun\t  Jul\t  Aug\t  Sep\t  Oct\t  Nov\t  Dec\t\n");
+}
+void tab_monthly(int month, int year, float rain[YEARS][MONTHS])
+{
+    int subtot;
     for (month = 0; month < MONTHS; month++)
     {
         for (year = 0, subtot = 0; year < YEARS; year++)
             // subtot += rain[year][month];
             subtot += *(*(rain + year) + month);
-        printf("%991.1f\t\t", subtot / YEARS);
+        printf("%4.1f", subtot / YEARS);
     }
-    printf("\n");
-    return 0;
 }
